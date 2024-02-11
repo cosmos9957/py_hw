@@ -33,7 +33,7 @@ print(
 user_selection: str = input("Поле ввода: ")
 
 # init price of vegetables
-# Вероятно, стоит использовать словарь для привязки цены к переменным с овощами (ключ - овощ, значение - цена)
+# TODO: Сделать словарь
 cucumber_price: int = 113
 tomato_price: int = 194
 potatoes_price: int = 24
@@ -61,11 +61,12 @@ if (
     or user_selection == '"цена"'
     or user_selection == "wtyf"
 ):
-    # if user_selection in ['цена', '"цена"'] ПРОЧИТАТЬ ПРО ОПЕРАТОР 'in'!
+# TODO: if user_selection in ['цена', '"цена"'] ПРОЧИТАТЬ ПРО ОПЕРАТОР 'in'
     print("\nНапишите в поле ввода продукт, цену которого вы хотите узнать?")
     user_product_price: str = input(
         "Поле ввода: "
-    )  # Сохранение ввода пользователя в переменную ПРОЧИТАТЬ ПОДРОБНЕЕ!
+    )
+# TODO: Сохранение ввода пользователя в переменную ПРОЧИТАТЬ ПОДРОБНЕЕ!
     if user_product_price.lower() == "огурец":
         print(str(cucumber_price) + " " + "рублей за кг")
     if user_product_price.lower() == "помидор":
@@ -84,7 +85,7 @@ if (
         print(str(onion_price) + " " + "рублей за кг")
     if user_product_price.lower() == "кабачок":
         print(str(zucchini_price) + " " + "рублей за кг")
-# Добавить функционал возврата к меню для формирования корзины
+# TODO: Добавить функционал возврата к меню для формирования корзины
 elif (
     user_selection.lower() == "корзина"
     or user_selection == '"корзина"'
@@ -131,6 +132,6 @@ elif (
     if user_product_basket.lower() == "кабачок":
         total_price = zucchini_price / 1000 * user_product_basket_weight
         print(str(total_price) + " " + "рублей")
-# Дописать else
+# TODO: Дописать else
 
-# Ввести функционал при введении пользователем неверных команд
+# TODO: Ввести функционал при введении пользователем неверных команд
